@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="es"> 
+    <head><!-- AQUI VIENE LOS METADATOS Y LA CONEXION al style.css-->
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"
+<meta name="author" content="Fernando Ferrusca">
+<meta name="description" content="Es un diseño de un carrito de compras">
+
+<meta name="keywords" content="Ropa, tenis, bolsas, fundas, hype, barato, descuento, collares, bolsas,
+anillos, bracaletes, joyeria, accesorios, juguetes">
+<!--esto es el titulo de la pagina-->
+<title>Carrito de compras - Yupoo </title>
+<!--esto enlaza con la hoja de estilos-->
+<link rel="stylesheet" href="css/style.css">
+
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script src="https://cdn.jsdelivr.net/npm/lucide@0.577.0/dist/umd/lucide.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Fraunces:opsz,wght@9..144,600;9..144,700&amp;display=swap" rel="stylesheet">
+  </head>
+
+
+  <body class="paper-texture">
+  <body class="body">
+
+
+    <!--===============ENCABEZADO==================-->
+    <header class="site-header">
+        <div class="container header-inner">   
+           <a href="#inicio" class="logo">
+        <span class="logo-icon">$</span>
+        Yupoo
+      </a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#productos">Productos</a></li>
+          <li><a href="#beneficios">Conocenos</a></li>
+          <li><a href="#oferta">Oferta</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+        <button type="button" class="btn primary" onclick="openWhatsApp('Hola, quiero hacer un pedido en Dulce Detalle.')">
+          <i data-lucide="message-circle"></i> Pedir ahora
+        </button>
+      </nav>
+      <button id="menu-toggle" class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" 
+      aria-controls="mobile-menu">☰</button>
+        </div>
+      
+      
+
+
+<!--===================MAIN NAV MOBILE==================-->
+
+    <nav id="mobile-menu" class="mobile-nav">
+ <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#productos">Productos</a></li>
+          <li><a href="#beneficios">Conocenos</a></li>
+          <li><a href="#oferta">Oferta</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+ <button type="button" class="btn primary" onclick="openWhatsApp('Hola, quiero hacer un pedido en Dulce Detalle.')">
+          <i data-lucide="message-circle"></i> Pedir ahora
+        </button>
+    </nav>
+
+</header>
+
+<main>
+
+ <!-- ================= HERO ================= -->
+    <section id="inicio" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text reveal">
+          <p class="eyebrow">La calidad mas fuerte que hay</p>
+          <h1>Los productos de moda mas actuales </h1>
+          <p class="lead">La tienda que buscabas para iniciar tu negocio, preicos de mayoreo y menudeo.</p>
+          <div class="hero-actions">
+            <a href="#productos" class="btn primary">Ver productos</a>
+            <button type="button" class="btn outline" onclick="openWhatsApp('Hola, vi su página y me gustaría conocer sus regalos personalizados.')">Comprar por WhatsApp</button>
+          </div>
+          <p class="trust"><i data-lucide="heart"></i> Más de 50 tiendas de lujo, hype y streatware</p>
+        </div>
+        <div class="hero-image reveal">
+          <img src="img/LOGO.jpg" alt="Logo de tienda de ropa Fernando Ferrusca.">
+          <span class="tag tag-love">Calidad espejo</span>
+          <span class="tag tag-custom">Entregas globales</span>
+        </div>
+      </div>
+    </section>
+
+<!-- ================= PRODUCTOS ================= -->
+    <section id="productos" class="products">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Calidad asegurada</p>
+          <h2>Nuestros productos</h2>
+          <p class="lead">Elige tu talla y nosotros hacemos lo demas</p>
+        </div>
+        <div class="product-grid">
+          <article class="product-card reveal">
+            <img src="img/imagen1.jpg" alt="Caja de regalo rosa con listón y chocolates gourmet.">
+            <div class="product-body">
+              <span class="tag">Caliente</span>
+              <h3>Louis Vuitton Trainer Negro</h3>
+              <p class="price">$2,200 MXN</p>
+              <p class="description">Los clásicos tenis LV Trainer de la colección de hombre de Louis Vuitton se reinterpretan 
+                por primera vez para mujer. Este modelo creado por Virgil Abloh está confeccionado en suave piel 
+              de becerro y tejido denim Monograma y se inspira en el calzado vintage de basquetbol.</p>
+              <button type="button" class="btn card" onclick="openModal('modal-caja')">Ver producto</button>
+            </div>
+          </article>
+          <article class="product-card reveal">
+            <img src="img/imagen2.jpg" alt="Velas artesanales en frascos de vidrio ámbar.">
+            <div class="product-body">
+              <span class="tag">Favorito</span>
+              <h3>Burberry shirt classic monogram</h3>
+              <p class="price">$1,300 MXN</p>
+              <p class="description">Una camisa de manga larga confeccionada en algodón ligero, tejida con 
+                el característico estampado Burberry Check en tono beige arena.El diseño presenta un corte 
+                relajado y lleva discretamente bordado nuestro logotipo en letra cursiva.</p>
+              <button type="button" class="btn card" onclick="openModal('modal-vela')">Ver producto</button>
+            </div>
+          </article>
+          <article class="product-card reveal">
+            <img src="img/imagen4.jpg" alt="Taza floral personalizada para regalo.">
+            <div class="product-body">
+              <span class="tag">Favorito</span>
+              <h3>Bracaletes Cartier unisex plata y oro</h3>
+              <p class="price">$760 MXN</p>
+              <p class="description">El origen de la colección LOVE es la emblemática pulsera creada en Nueva York en 1969. 
+                Reconocemos esta pulsera ovalada, expresión de la visión del diseño de Cartier, por su motivo 
+                radical e innovador, que se atreve a mostrar los tornillos. Más allá de su diseño, LOVE es una colección manifiesto que sella los sentimientos.</p>
+              <button type="button" class="btn card" onclick="openModal('modal-taza')">Ver producto</button>
+            </div>
+          </article>
+          <article class="product-card reveal">
+            <img src="img/imagen6.jpg" alt="Suculentas decorativas envueltas para regalo.">
+            <div class="product-body">
+              <span class="tag">Favorito</span>
+              <h3>Knot Lock de Bottega Veneta.</h3>
+              <p class="price">$1,400 MXN</p>
+              <p class="description">La línea Knot Lock presenta una silueta sofisticada y propone una interpretación moderna
+                 del icónico cierre metálico en forma de nudo (knot). Transiciona con fluidez de un bolso cruzado (crossbody) 
+                 a un bolso de mano (clutch con asa superior), armonizando una estructura en forma de sobre con la
+                  refinada técnica artesanal del tejido Intrecciato..</p>
+              <button type="button" class="btn card" onclick="openModal('modal-jardin')">Ver producto</button>
+            </div>
+          </article>
+          <article class="product-card reveal">
+            <img src="img/imagen9.jpg" alt="Regalos y postres coloridos para celebración de cumpleaños.">
+            <div class="product-body">
+              <span class="tag">Favorito</span>
+              <h3>Bolso Clásico 11.12 (Classic Flap Bag)</h3>
+              <p class="price">$1,100 MXN</p>
+              <p class="description">Símbolo de elegancia y excelencia, el bolso clásico 11.12 está confeccionado con el savoir-faire 
+                y la precisión de una prenda de alta costura. Diseñado para ofrecer una estética atemporal y funcionalidad en
+                 movimiento, combina la icónica piel acolchada con el icónico cierre de doble C entrelazada y una cadena entrelazada 
+                 con piel para llevar al hombro o cruzado.</p>
+              <button type="button" class="btn card" onclick="openModal('modal-kit')">Ver producto</button>
+            </div>
+          </article>
+          <article class="product-card reveal">
+            <img src="img/imagen10.jpg" alt="Tarjetas elegantes decoradas con flores secas y lavanda.">
+            <div class="product-body">
+              <span class="tag">Caliente</span>
+              <h3>Cassandre Envelope Wallet (o Monogram Envelope Wallet) de Saint Laurent (YSL)</h3>
+              <p class="price">$600 MXN</p>
+              <p class="description">Cartera pequeña de solapa estructurada con las iniciales YSL de metal en el centro y costuras
+                 acolchadas en forma de espiga. Un accesorio compacto e icónico diseñado para ofrecer la máxima funcionalidad
+                  con un formato elegante.</p>
+              <button type="button" class="btn card" onclick="openModal('modal-tarjeta')">Ver producto</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+<!-- ================= BENEFICIOS ================= -->
+    <section id="beneficios" class="benefits">
+      <div class="container">
+        <div class="section-heading reveal">
+          <h2>¿Por qué comprarnos?</h2>
+        </div>
+        <div class="benefits-grid">
+          <article class="benefit-card reveal">
+            <div class="benefit-icon"><i data-lucide="sparkles"></i></div>
+            <h3>Prodcutos certificados</h3>
+            <p>Todos los productos vienen con un certificado de calidad por parte de la tienda.</p>
+          </article>
+          <article class="benefit-card reveal">
+            <div class="benefit-icon"><i data-lucide="message-circle-heart"></i></div>
+            <h3>Atención rápida</h3>
+            <p>Te respondemos con cercanía y claridad.</p>
+          </article>
+          <article class="benefit-card reveal">
+            <div class="benefit-icon"><i data-lucide="truck"></i></div>
+            <h3>Envíos</h3>
+            <p>Tu prenda llega a donde lo necesites.</p>
+          </article>
+          <article class="benefit-card reveal">
+            <div class="benefit-icon"><i data-lucide="mouse-pointer-click"></i></div>
+            <h3>Compra fácil</h3>
+            <p>Elige, agrega al carrito y compra.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- ================= OFERTA ================= -->
+    <section id="oferta" class="offer">
+      <div class="container">
+        <div class="offer-panel reveal">
+          <span class="tag tag-light">Oferta de bienvenida</span>
+          <h2>10% de descuento en tu primer pedido</h2>
+          <p>Comienza tu nuevo guarda ropa con Yupoo, barato, calidad y confianza. </p>
+          <button id="offer-button" type="button" class="btn butter" onclick="revealOffer()">Quiero mi descuento</button>
+          <div id="offer-reveal" class="offer-reveal hidden" aria-live="polite">
+            <p class="offer-reveal-title">¡Listo! Tu código de bienvenida es:</p>
+            <div class="offer-code-row">
+              <span class="offer-code">HYPE12</span>
+              <button id="copy-code" type="button" class="btn outline" onclick="copyDiscount()">Copiar código</button>
+              <button type="button" class="btn whatsapp" onclick="openWhatsApp('Hola, quiero usar mi código DULCE10 en mi primer pedido.')">Pedir por WhatsApp</button>
+            </div>
+            <p id="copy-feedback" class="copy-feedback hidden" role="status">Código copiado</p>
+          </div>
+        </div>
+      </div>
+    </section>      
+
+
+
+<!-- ================= TESTIMONIOS ================= -->
+    <section class="testimonials">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Puedes confiar en nosotros</p>
+          <h2>Lo que dicen nuestros clientes</h2>
+        </div>
+        <div class="testimonial-viewport">
+          <div id="testimonial-track" class="testimonial-track">
+            <article class="testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-header">
+                  <img class="avatar" src="https://images.pexels.com/photos/8727453/pexels-photo-8727453.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Retrato genérico de una mujer sonriente.">
+                  <div>
+                    <p class="name">Regina Suarez.</p>
+                    <p class="occasion">Regalo para mamá</p>
+                  </div>
+                </div>
+                <p class="quote">"Ame la calidad y mi mama quedo impactada por su regalo. Recomendando."</p>
+                <div class="stars" aria-label="Cinco estrellas">★★★★★</div>
+              </div>
+            </article>
+            <article class="testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-header">
+                  <img class="avatar" src="https://images.pexels.com/photos/12446392/pexels-photo-12446392.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Retrato genérico de un hombre sonriente.">
+                  <div>
+                    <p class="name">Daniela Ferrara.</p>
+                    <p class="occasion">Playera</p>
+                  </div>
+                </div>
+                <p class="quote">"Pude conseguir la playera que tanto queria; La calidad es increible"</p>
+                <div class="stars" aria-label="Cinco estrellas">★★★★★</div>
+              </div>
+            </article>
+            <article class="testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-header">
+                  <img class="avatar" src="https://images.pexels.com/photos/962337/pexels-photo-962337.png?auto=compress&cs=tinysrgb&w=400" alt="Retrato genérico de una mujer joven sonriente.">
+                  <div>
+                    <p class="name">Fer Salgado.</p>
+                    <p class="occasion">Detalle sorpresa</p>
+                  </div>
+                </div>
+                <p class="quote">"Le encanto a mi novio, llego a tiempo y tiene muy buena calidad, pague el extra para las cajas y los recibos y son iguales a los originales."</p>
+                <div class="stars" aria-label="Cinco estrellas">★★★★★</div>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="carousel-controls">
+          <button id="testimonial-prev" type="button" aria-label="Testimonio anterior"><i data-lucide="arrow-left"></i></button>
+          <div id="testimonial-dots" class="dots" aria-label="Seleccionar testimonio">
+            <button class="active" aria-label="Ver testimonio 1" aria-current="true"></button>
+            <button aria-label="Ver testimonio 2" aria-current="false"></button>
+            <button aria-label="Ver testimonio 3" aria-current="false"></button>
+          </div>
+          <button id="testimonial-next" type="button" aria-label="Siguiente testimonio"><i data-lucide="arrow-right"></i></button>
+        </div>
+      </div>
+    </section>
+
+
+ <!-- ================= CONTACTO ================= -->
+    <section id="contacto" class="contact">
+      <div class="container contact-panel reveal">
+        <div class="contact-text">
+          <p class="eyebrow">Calidad espejo-excelente calidad</p>
+          <h2>Tu proxima prenda te esta esperando</h2>
+          <p class="lead">Pregunta por cualquier prenda o accesrio
+             que desees y Yupoo lo consigue, calidad, confianza y el mejor precio del mercado. </p>
+          <button type="button" class="btn primary" onclick="openWhatsApp('Hola, quiero platicar sobre un detalle personalizado.')">Escribir por WhatsApp</button>
+        </div>
+        <aside class="contact-info" aria-label="Datos de contacto">
+          <ul>
+            <li><i data-lucide="instagram"></i> <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer">@YUPOO.OFICIAL</a></li>
+            <li><i data-lucide="facebook"></i> <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer">@Yupoo_oficial</a></li>
+            <li><i data-lucide="mail"></i> <a href="mailto:hello@yupoo.mx">hello@yupoo.com.mx</a></li>
+            <li><i data-lucide="clock-3"></i> Entregas a todo el mundo</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+</main>
+ <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="brand">Yupoo_oficia4l</p>
+      <p class="love"> Todos los Derechos Resevados a Yupoo</p>
+      <nav class="footer-links">
+        <a href="#productos">Productos</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- Botón flotante de WhatsApp -->
+  <button id="whatsapp-float" type="button" class="whatsapp-float" aria-label="Escribir por WhatsApp" onclick="openWhatsApp('Hola, quiero conocer los detalles personalizados de Dulce Detalle.')">
+    <i data-lucide="message-circle"></i>
+  </button>
+   
+<script src="js/script.js"></script>
+</body>
+</html>
